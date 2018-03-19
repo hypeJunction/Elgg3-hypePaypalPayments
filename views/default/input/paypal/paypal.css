@@ -1,0 +1,6 @@
+[data-paypal] .paypal-element {
+	max-width: 500px;
+	max-height: 45px;
+	margin: 0 auto;
+	text-align: center;
+}

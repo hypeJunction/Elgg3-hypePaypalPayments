@@ -1,0 +1,29 @@
+{
+	"name": "hypejunction/hypepaypalpayments",
+	"type": "elgg-plugin",
+	"description": "Paypal client for Elgg",
+	"homepage": "http://hypejunction.com",
+	"keywords": [
+        "elgg", "plugin", "paypal", "payments", "paypal api"
+	],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Ismayil Khayredinov",
+			"email": "info@hypejunction.com"
+		}
+	],
+    "extra": {
+        "installer-name": "hypePaypalPayments"
+    },
+	"require": {
+		"php": ">=7.0",
+		"composer/installers": "~1.0",
+		"paypal/rest-api-sdk-php": "^1.13"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "classes/"
+		}
+	}
+}

@@ -3,15 +3,23 @@ define(function (require) {
 	var elgg = require('elgg');
 	var paypal = require('paypal');
 	var Ajax = require('elgg/Ajax');
+	var Form = require('ajax/Form');
 
 	var api = {
 		init: function (id) {
 			var $elem = $(id);
 			var $form = $elem.closest('form');
+			var form = new Form($form);
 
-			if ($form.find('input[name="paypal_payment_id"]').is('[data-required]')) {
-				$form.find('[type="submit"]').prop('disabled', true);
-			}
+			form.onSubmit(function (resolve, reject) {
+				if (!$form.find('input[name="paypal_payment_id"]').is('[data-required]')) {
+					return resolve();
+				}
+
+				if (!$form.find('[name="paypal_payment_id"]').val()) {
+					return reject('Paypal payment must be authorized');
+				}
+			};
 
 			var config = $.extend({}, $elem.data('config'), {
 				env: elgg.data.paypal_env,
@@ -29,8 +37,6 @@ define(function (require) {
 				onAuthorize: function(data) {
 					$form.find('[name="paypal_payment_id"]').val(data.paymentID || data.orderID);
 					$form.find('[name="paypal_payer_id"]').val(data.payerID);
-
-					$form.get(0).submit();
 				}
 			});
 

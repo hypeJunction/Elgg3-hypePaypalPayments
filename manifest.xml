@@ -29,6 +29,11 @@
         <name>hypePayments</name>
     </requires>
 
+    <requires>
+        <type>plugin</type>
+        <name>hypeAjax</name>
+    </requires>
+
     <suggests>
         <type>plugin</type>
         <name>hypeCountries</name>

@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/hypeJunctionPro/Elgg3-hypePaypalPayments/compare/1.1.0...1.1.1) (2018-07-06)
+
+
+### Bug Fixes
+
+* **forms:** use ajax Form api to verify required paypal authorization ([212f245](https://github.com/hypeJunctionPro/Elgg3-hypePaypalPayments/commit/212f245))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/hypeJunctionPro/Elgg3-hypePaypalPayments/compare/1.0.0...1.1.0) (2018-06-29)
 

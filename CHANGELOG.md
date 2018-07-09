@@ -1,3 +1,13 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/hypeJunctionPro/Elgg3-hypePaypalPayments/compare/1.1.1...1.1.2) (2018-07-09)
+
+
+### Bug Fixes
+
+* **conf:** correctly map environment parameter ([cf77143](https://github.com/hypeJunctionPro/Elgg3-hypePaypalPayments/commit/cf77143))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/hypeJunctionPro/Elgg3-hypePaypalPayments/compare/1.1.0...1.1.1) (2018-07-06)
 

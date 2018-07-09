@@ -67,7 +67,7 @@ class PaypalClient {
 		$api_context = new ApiContext($credential);
 
 		$api_context->setConfig([
-			'mode' => $this->environment,
+			'mode' => $this->environment === 'production' ? 'live' : 'sandbox',
 			'log.LogEnabled' => true,
 			'log.FileName' => elgg_get_config('dataroot') . "paypal/{$this->environment}.log",
 			'log.LogLevel' => 'DEBUG',
